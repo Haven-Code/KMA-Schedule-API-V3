@@ -1,0 +1,20 @@
+{
+  "name": "azure",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "axios-cookiejar-support": "^1.0.1",
+    "cheerio": "^1.0.0-rc.3",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "node-xlsx": "^0.15.0",
+    "query-string": "^6.13.7",
+    "tough-cookie": "^4.0.0"
+  },
+  "devDependencies": {}
+}
