@@ -30,6 +30,9 @@ module.exports = async function (context, req) {
 				code: '400',
 				message: 'Missing Item',
 			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
 	}
 
@@ -71,6 +74,9 @@ module.exports = async function (context, req) {
 					code: 401,
 					message: 'Wrong Password',
 				}),
+				headers: {
+					'Content-Type': 'application/json'
+				}
 			})
 		}
 
@@ -80,6 +86,9 @@ module.exports = async function (context, req) {
 					code: 403,
 					message: 'Please Logn Again !',
 				}),
+				headers: {
+					'Content-Type': 'application/json'
+				}
 			})
 		}
 
@@ -91,6 +100,9 @@ module.exports = async function (context, req) {
 					code: 402,
 					message: schedule.message,
 				}),
+				headers: {
+					'Content-Type': 'application/json'
+				}
 			}
 		} else {
 			const res = await axios.get(studentProfileUrl, { withCredentials: true, jar: cookieJar })
@@ -115,6 +127,9 @@ module.exports = async function (context, req) {
 						studentInfo: information,
 						studentSchedule: schedule.data,
 					},
+					headers: {
+						'Content-Type': 'application/json'
+					}
 				}),
 			}
 		}
@@ -126,6 +141,9 @@ module.exports = async function (context, req) {
 				code: '500',
 				message: 'Error: ' + e,
 			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
 		})
 	}
 }
